@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+
+# Purpose: to say Hello World
+
+import os
+import sys
+
+# Add the lib directory to the search path
+sys.path.append(os.path.abspath(__file__ + '/../../modules'))
+
+# Configure script options
+import script_options
+script_options.add_test_option()
+
+# Load the environment
+import environment
+
+print("Hello World the test is " + environment.SCRIPT_OPTIONS.test)
